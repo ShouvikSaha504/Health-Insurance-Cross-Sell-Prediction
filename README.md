@@ -1,8 +1,6 @@
 # Health-Insurance-Cross-Sell-Prediction
 End to End Machine Learning
 
-# Vehicle Insurance Interest Prediction Model
-
 ## Overview
 
 This repository contains a predictive model developed to forecast whether customers with existing health insurance will be interested in purchasing vehicle insurance from the same provider. The model leverages various customer attributes and historical insurance data to generate predictions that can help optimize the company's communication strategy and enhance business revenue.
