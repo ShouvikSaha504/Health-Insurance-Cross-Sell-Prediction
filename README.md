@@ -1,5 +1,5 @@
 # Health-Insurance-Cross-Sell-Prediction
-End to End Machine Learning
+End-to-End Machine Learning Project
 
 ## Overview
 
@@ -9,13 +9,9 @@ This repository contains a predictive model developed to forecast whether custom
 
 Our client, an insurance company, currently offers health insurance to its customers. They now seek assistance in developing a model to predict whether these policyholders from the past year might also be interested in purchasing vehicle insurance from the company.
 
-To explain, an insurance policy is a financial arrangement where a company promises to compensate for certain types of loss, damage, illness, or death in exchange for a regular premium payment. For example, you might pay an annual premium of Rs. 5000 for health insurance coverage of Rs. 200,000. If you were to fall ill and require hospitalization within that year, the insurance provider would cover the costs up to Rs. 200,000. The reason a company can offer such high coverage despite the relatively low premium is based on probabilities: not every policyholder will require such extensive care, so the risk is shared among many.
-
-Similarly, vehicle insurance works in the same way. Customers pay an annual premium to the insurance provider, who then offers compensation in case of an accident.
-
 Developing a model to predict which customers might be interested in vehicle insurance is crucial for our client. It will enable them to tailor their communication strategy effectively, optimize their business model, and enhance revenue.
 
-To build this predictive model, we will use information about customer demographics (e.g., gender, age, region), vehicle details (e.g., vehicle age, damage status), and policy information (e.g., premium amount, sales channel).
+To build this predictive model, we used information about customer demographics (e.g., gender, age, region), vehicle details (e.g., vehicle age, damage status), and policy information (e.g., premium amount, sales channel).
 
 ## Dataset Description
 
@@ -30,16 +26,81 @@ The dataset used for this project includes the following features:
 - **Vehicle_age**: Age of the vehicle
 - **Vehicle_damage**: Whether there are past damages present on the vehicle (Yes/No)
 - **Annual_premium**: Amount the customer needs to pay as a premium
-- **Policy SalesChannel**: Anonymized code for the channel used to outreach to the customer (e.g., Different Agents, Over Mail, Over Phone, In Person, etc.)
+- **Policy SalesChannel**: Anonymized code for the channel used to outreach to the customer
 - **Vintage**: Number of days the customer has been associated with the company
 - **Response**: Whether the customer is interested in vehicle insurance (Yes/No)
 
-## Libraries and Tools
+## Objectives
 
-- **Pandas**: For data manipulation and aggregation
-- **NumPy**: For computationally efficient operations
-- **Matplotlib**: For data visualization
-- **Seaborn**: For advanced data visualization and behavior analysis
-- **Scikit Learn**: For model training, optimization, and metrics calculation
+1. Develop a predictive model to identify customers likely to purchase vehicle insurance.
+2. Optimize the company’s marketing strategy based on predictive insights.
+3. Enhance business revenue through targeted communication and personalized offerings.
 
+## Methodologies
 
+### Data Manipulation and Preparation
+
+1. Created a shallow copy of the original DataFrame for backup purposes.
+2. Dropped the unique identifier (`id`) as it does not contribute to our analysis.
+3. Converted binary columns (`Driving License`, `Previously_insured`, and `Response`) to categorical values ("Yes" and "No") to simplify visualizations.
+4. Converted float data types to integers to reduce memory usage.
+5. Created an additional column to categorize customers based on their association duration (`vintage`) into long-term, intermediate, and short-term customers.
+
+### Exploratory Data Analysis (EDA)
+
+- Utilized various visualization techniques like bar charts, pie charts, scatter plots, histograms, and heat maps to understand relationships between variables.
+- Performed feature engineering and data pre-processing, including:
+  - Identifying and handling outliers using box plots.
+  - Scaling data using Min-Max Scaler.
+  - Encoding categorical variables using ordinal and label encoding.
+  - Addressing class imbalance using SMOTE (Synthetic Minority Over-sampling Technique).
+
+### Model Development
+
+- Implemented three machine learning models:
+  - Logistic Regression
+  - Decision Tree
+  - XGBoost
+- Performed hyperparameter tuning using Grid Search and applied stratified k-fold cross-validation to ensure model robustness.
+
+## Insights and Recommendations
+
+### Key Insights
+
+1. **Customer Segmentation**: 
+   - Long-term customers show a higher likelihood of purchasing vehicle insurance, indicating a strong potential for cross-selling.
+   - Customers with past vehicle damage history are more inclined to seek vehicle insurance.
+
+2. **Marketing Strategy**:
+   - Focus marketing efforts on customers with driving licenses, as they are more likely to own vehicles.
+   - Prioritize recent vehicle buyers (vehicle age between 1-2 years) for cross-selling efforts.
+   - Tailor marketing messages based on gender, considering the differing levels of interest in vehicle insurance.
+
+3. **Feature Importance**:
+   - The `Vehicle_damage`, `Previously_insured`, and `Vehicle_age` columns were among the most significant predictors in the model.
+
+### Recommendations
+
+- **Customer Segmentation**: 
+  - Implement targeted marketing campaigns for long-term customers with personalized rewards.
+  - Streamline claim processes for intermediate customers to encourage loyalty.
+  - Offer discounts and promotions to attract short-term customers.
+
+- **Targeted Marketing**:
+  - Focus on customers with past vehicle damage history, as they are more likely to purchase insurance.
+  - Prioritize customers with driving licenses and recent vehicle purchases.
+
+- **Gender-Based Customization**:
+  - Tailor product offerings based on gender insights, particularly to engage male customers who showed higher disinterest.
+
+## Model Selection
+
+After comparing the three models, we selected the **Decision Tree** as the final prediction model due to its superior performance across various evaluation metrics, including accuracy, precision, recall, F1-score, and AUC ROC score. 
+
+- **Logistic Regression**: Underperformed with unsatisfactory metric scores.
+- **XGBoost**: Performed moderately well but did not surpass the Decision Tree.
+- **Decision Tree**: Achieved the highest scores and demonstrated the best overall performance.
+
+## Conclusion
+
+Deploying the Decision Tree model is the optimal choice for the insurance company's cross-selling efforts. Leveraging the insights gained from our analysis, the company can enhance its vehicle insurance cross-selling strategies by offering discounts, tailoring products based on demographics, and improving the claim settlement process. This targeted approach will allow the company to focus its marketing efforts effectively, ultimately driving revenue growth.
