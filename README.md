@@ -44,7 +44,7 @@ The dataset used for this project includes the following features:
 2. Optimize the company’s marketing strategy based on predictive insights.
 3. Enhance business revenue through targeted communication and personalized offerings.
 
-**Project Link:** https://github.com/ShouvikSaha504/Health-Insurance-Cross-Sell-Prediction/blob/44bffbae9fac8fb62af974b2087de2a3fb18dd15/Health_Insurance_Cross_Sell_Prediction.ipynb
+[**Project Link:**](https://github.com/ShouvikSaha504/Health-Insurance-Cross-Sell-Prediction/blob/44bffbae9fac8fb62af974b2087de2a3fb18dd15/Health_Insurance_Cross_Sell_Prediction.ipynb)
 
 ## Methodologies
 
