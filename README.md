@@ -1,13 +1,14 @@
-# Health-Insurance-Cross-Sell-Prediction
+# United India Health-Insurance-Cross-Sell-Prediction
 End-to-End Machine Learning Project
 
 ## Overview
 
-This repository contains a predictive model developed to forecast whether customers with existing health insurance will be interested in purchasing vehicle insurance from the same provider. The model leverages various customer attributes and historical insurance data to generate predictions that can help optimize the company's communication strategy and enhance business revenue.
+This repository contains a predictive model developed to forecast whether customers with existing health insurance will be interested in purchasing vehicle insurance from the same provider, United India. The model leverages various customer attributes and historical insurance data to generate predictions that can help optimize the company's communication strategy, enhance business revenue, and improve customer acquisition.
+
 
 **Business Context**
 
-Our client, an insurance company, currently offers health insurance to its customers. They now seek assistance in developing a model to predict whether these policyholders from the past year might also be interested in purchasing vehicle insurance from the company.
+Our client United India, an insurance company, currently offers health insurance to its customers. They now seek assistance in developing a model to predict whether these policyholders from the past year might also be interested in purchasing vehicle insurance from the company.
 
 Developing a model to predict which customers might be interested in vehicle insurance is crucial for our client. It will enable them to tailor their communication strategy effectively, optimize their business model, and enhance revenue.
 
