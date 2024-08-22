@@ -13,6 +13,11 @@ Developing a model to predict which customers might be interested in vehicle ins
 
 To build this predictive model, we used information about customer demographics (e.g., gender, age, region), vehicle details (e.g., vehicle age, damage status), and policy information (e.g., premium amount, sales channel).
 
+**Objective:**
+
+The objective of this project is to develop a predictive model that identifies which existing health insurance policyholders are likely to be interested in purchasing vehicle insurance from the same provider. By leveraging customer demographics, vehicle details, and policy information, the model aims to enhance targeted marketing efforts, optimize communication strategies, and increase revenue for the company. This approach will enable the company to prioritize high-potential leads, improve customer engagement, and ultimately refine their business model to achieve greater efficiency and profitability.
+
+
 ## Dataset Description
 
 The dataset used for this project includes the following features:
